@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation setSearchList={setSearchList} />
       <Search setSearchList={setSearchList} />
       <div className="results-container">
         {searchedBooksList}

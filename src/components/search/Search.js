@@ -17,12 +17,12 @@ const Search = ({ setSearchList }) => {
         .then((results) => {
             const searchResults = results.data.docs.slice(20)
             setSearchList(searchResults)
+            
         })
-
     }
     return(
         <form onSubmit={onSubmit} className='search'>
-            <input type="text" onChange={onChange} className="search__input" placeholder="Search by Title or Author..."/>
+            <input type="text" onChange={onChange} className="search__input" placeholder="Search by Title or Author..." />
             <input type="submit" value='Search' className="search__submit" />
         </form>
     )
