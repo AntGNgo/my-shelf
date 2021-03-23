@@ -7,22 +7,20 @@ import './App.css';
 
 const App = () => {
   const [searchList, setSearchList] = useState([])
-  
-  const setList = (results) => {
-    setSearchList(results)
-  }
 
   const searchedBooksList = searchList.map((book) => {
     return(
-     <SearchResult bookInfo={book} />
+        <SearchResult bookInfo={book} />
     )
   })
 
   return (
     <div>
       <Navigation />
-      <Search setList={setList} />
-      {searchedBooksList}
+      <Search setSearchList={setSearchList} />
+      <div className="results-container">
+        {searchedBooksList}
+      </div>
     </div>
   )
 }

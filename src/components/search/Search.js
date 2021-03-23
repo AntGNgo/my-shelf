@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from "axios"
 import './search.css'
 
-const Search = ({ setList }) => {
+const Search = ({ setSearchList }) => {
 
     const [query, setQuery] = useState("")
 
@@ -13,18 +13,17 @@ const Search = ({ setList }) => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        axios.get(`http://openlibrary.org/search.json?title=${query}`)
+        axios.get(`http://openlibrary.org/search.json?q=${query}`)
         .then((results) => {
             const searchResults = results.data.docs.slice(20)
-            console.log(searchResults)
-            setList(searchResults)
+            setSearchList(searchResults)
         })
 
     }
     return(
         <form onSubmit={onSubmit} className='search'>
-            <input type="text" onChange={onChange}/>
-            <input type="submit" value='Search' />
+            <input type="text" onChange={onChange} className="search__input" placeholder="Search by Title or Author..."/>
+            <input type="submit" value='Search' className="search__submit" />
         </form>
     )
 }

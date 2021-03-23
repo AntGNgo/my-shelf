@@ -1,4 +1,15 @@
 .search {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.search__input {
+    width: 70%;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
