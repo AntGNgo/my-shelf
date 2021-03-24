@@ -1,27 +1,26 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 import Navigation from './components/navigation/Navigation'
-import Search from './components/search/Search'
-import SearchResult from './components/searchResult/SearchResult'
+import Home from './pages/home/Home'
+import SearchPage from './pages/searchPage/SearchPage'
+import Shelf from './pages/shelf/Shelf'
+import Login from './pages/login/Login'
 import './App.css';
 
 const App = () => {
-  const [searchList, setSearchList] = useState([])
-
-  const searchedBooksList = searchList.map((book) => {
-    return(
-        <SearchResult bookInfo={book} />
-    )
-  })
-
   return (
-    <div>
-      <Navigation setSearchList={setSearchList} />
-      <Search setSearchList={setSearchList} />
-      <div className="results-container">
-        {searchedBooksList}
-      </div>
-    </div>
+    <Router>
+        <Navigation />
+      
+      <Switch>
+      <Route exact path='/' component={Home} />
+        <Route exact path='/shelf' component={Shelf} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/search' component={SearchPage} />
+      </Switch>
+      
+    </Router>
   )
 }
 

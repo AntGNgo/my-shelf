@@ -1,14 +1,17 @@
 import Search from '../search/Search'
+import { Link } from "react-router-dom"
 import './navigation.css'
 
-const Navigation = ({ setSearchList }) => {
+const Navigation = () => {
     return(
         <div className="navigation">
-            <h1 onClick={() => setSearchList([])}>My Shelf</h1>
+            <Link to="/"><h1>My Shelf</h1></Link>
+            <Link to='/search'>Search</Link>
             <div className='access'>
-                <button>Log In</button>
-                <button>Sign Up</button>
+                <Link to="/login"><button>Log In</button></Link>
+                <Link to='/signup'><button>Sign Up</button></Link>
             </div>
+
         </div>
     )
 }
