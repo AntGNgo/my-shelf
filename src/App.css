@@ -1,13 +1,2 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 
-body {
-    width: 80%;
-    margin: 0 auto;
-    font-family: 'Open Sans', sans-serif;
-    background: #fffff0;
-}
-
-.results-container {
-    display: flex;
-    flex-direction: column;
-}

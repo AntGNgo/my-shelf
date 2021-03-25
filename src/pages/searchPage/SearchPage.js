@@ -1,14 +1,11 @@
 
 import { Fragment, useState } from 'react'
-import Search from '../../components/search/Search'
 import SearchedBooksList from '../../components/searchedBooksList/SearchedBooksList'
 
-const SearchPage = () => {
-    const [searchList, setSearchList] = useState([])
-
+const SearchPage = ({ searchList }) => {
     return (
         <Fragment>
-            <Search setSearchList={setSearchList} />
+            <SearchedBooksList searchList={searchList} />
         </Fragment>
         
     )

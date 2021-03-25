@@ -9,12 +9,19 @@ import Login from './pages/login/Login'
 import './App.css';
 
 const App = () => {
+  const [searchList, setSearchList] = useState([])
+
   return (
     <Router>
         <Navigation />
       
       <Switch>
-      <Route exact path='/' component={Home} />
+        <Route exact path='/'>
+          <Home setSearchList={setSearchList}/>
+        </Route>
+        <Route exact path='/search'>
+          <SearchPage searchList={searchList}/>
+        </Route>
         <Route exact path='/shelf' component={Shelf} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/search' component={SearchPage} />

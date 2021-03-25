@@ -1,17 +1,24 @@
-import Search from '../search/Search'
 import { Link } from "react-router-dom"
 import './navigation.css'
 
 const Navigation = () => {
     return(
-        <div className="navigation">
-            <Link to="/"><h1>My Shelf</h1></Link>
-            <Link to='/search'>Search</Link>
-            <div className='access'>
-                <Link to="/login"><button>Log In</button></Link>
-                <Link to='/signup'><button>Sign Up</button></Link>
-            </div>
+        <div className="section">
+            <div className="navbar">
+                <div className="navbar-brand">
+                    <Link to="/"><h1 className='is-size-2 has-text-black'>My Shelf</h1></Link>
+                </div>
+                {/* <Link to='/search'><h1 className=''>Search</h1></Link> */}
+                <div className="navbar-menu">
+                    <div className="navbar-end">
+                        <Link to="/login"><a className='button is-dark'>Log In</a></Link>
+                        <Link to='/signup'><a className='button is-link ml-2'>Sign Up</a></Link>
+                    </div>
+                    
+                    
+                </div>
 
+            </div>
         </div>
     )
 }

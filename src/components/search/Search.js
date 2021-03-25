@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from "axios"
 import './search.css'
 
 const Search = ({ setSearchList }) => {
+    let history = useHistory()
+
     const [query, setQuery] = useState("")
 
     const onChange = (e) => {
@@ -17,13 +20,21 @@ const Search = ({ setSearchList }) => {
             const searchResults = results.data.docs.slice(20)
             setSearchList(searchResults)
         })
+        history.push('/search')
     }
     return(
-        
-        <form onSubmit={onSubmit} className='search'>
-            <input type="text" onChange={onChange} className="search__input" placeholder="Search by Title or Author..." />
-            <input type="submit" value='Search' className="search__submit" />
+        <form className="field has-addons has-addons-fullwidth" onSubmit={onSubmit}>
+            <div className="control">
+                <input type="text" className="input" placeholder='Search by Title or Author' onChange={onChange} />
+            </div>
+            <div className="control">
+                <input type='submit' className="button is-primary" />
+            </div>
         </form>
+        // <form onSubmit={onSubmit} className='search'>
+        //     <input type="text" onChange={onChange} className="search__input" placeholder="Search by Title or Author..." />
+        //     <input type="submit" value='Search' className="search__submit" />
+        // </form>
     )
 }
 
