@@ -1,12 +1,18 @@
 import SearchResult from '../searchResult/SearchResult'
 
 const SearchedBooksList = ({ searchList }) => {
-    return(
-        searchList.map((book) => {
-            return(
+    const listRender = searchList.map((book) => {
+        return(
+            <div className="column">
                 <SearchResult bookInfo={book} />
-            )
-        })
+            </div>
+        )
+    })
+
+    return(
+        <div className="columns">
+            {listRender}
+        </div>
     )
 }
 

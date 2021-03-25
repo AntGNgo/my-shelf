@@ -14,13 +14,12 @@ const App = () => {
   return (
     <Router>
         <Navigation />
-      
       <Switch>
         <Route exact path='/'>
           <Home setSearchList={setSearchList}/>
         </Route>
         <Route exact path='/search'>
-          <SearchPage searchList={searchList}/>
+          <SearchPage searchList={searchList} setSearchList={setSearchList}/>
         </Route>
         <Route exact path='/shelf' component={Shelf} />
         <Route exact path='/login' component={Login} />

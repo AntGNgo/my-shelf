@@ -1,12 +1,14 @@
 
 import { Fragment, useState } from 'react'
 import SearchedBooksList from '../../components/searchedBooksList/SearchedBooksList'
+import Search from '../../components/search/Search'
 
-const SearchPage = ({ searchList }) => {
+const SearchPage = ({ setSearchList, searchList }) => {
     return (
-        <Fragment>
+        <div>
+            <Search setSearchList={setSearchList} />
             <SearchedBooksList searchList={searchList} />
-        </Fragment>
+        </div>
         
     )
 }

@@ -15,9 +15,10 @@ const Search = ({ setSearchList }) => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        axios.get(`http://openlibrary.org/search.json?q=${query}`)
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=20`)
         .then((results) => {
-            const searchResults = results.data.docs.slice(20)
+            console.log(results)
+            const searchResults = results.data.items
             setSearchList(searchResults)
         })
         history.push('/search')
@@ -28,13 +29,10 @@ const Search = ({ setSearchList }) => {
                 <input type="text" className="input" placeholder='Search by Title or Author' onChange={onChange} />
             </div>
             <div className="control">
-                <input type='submit' className="button is-primary" />
+                <input type='submit' className="button is-primary" value='Search' />
             </div>
         </form>
-        // <form onSubmit={onSubmit} className='search'>
-        //     <input type="text" onChange={onChange} className="search__input" placeholder="Search by Title or Author..." />
-        //     <input type="submit" value='Search' className="search__submit" />
-        // </form>
+        
     )
 }
 
