@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import axios from "axios"
-import './search.css'
 
 const Search = ({ setSearchList }) => {
     let history = useHistory()
@@ -24,8 +23,8 @@ const Search = ({ setSearchList }) => {
         history.push('/search')
     }
     return(
-        <form className="field has-addons has-addons-fullwidth" onSubmit={onSubmit}>
-            <div className="control">
+        <form className="field is-grouped" onSubmit={onSubmit}>
+            <div className="control is-expanded">
                 <input type="text" className="input" placeholder='Search by Title or Author' onChange={onChange} />
             </div>
             <div className="control">

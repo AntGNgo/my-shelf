@@ -5,7 +5,8 @@ import Search from '../../components/search/Search'
 
 const SearchPage = ({ setSearchList, searchList }) => {
     return (
-        <div>
+        <div className='container'>
+            <p className='is-size-2'>Search for a book</p>
             <Search setSearchList={setSearchList} />
             <SearchedBooksList searchList={searchList} />
         </div>
