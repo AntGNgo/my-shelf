@@ -6,6 +6,7 @@ import Home from './pages/home/Home'
 import SearchPage from './pages/searchPage/SearchPage'
 import Shelf from './pages/shelf/Shelf'
 import Login from './pages/login/Login'
+import Signup from './pages/signup/Signup'
 import './App.css';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         </Route>
         <Route exact path='/shelf' component={Shelf} />
         <Route exact path='/login' component={Login} />
+        <Route exact path='/signup' component={Signup} />
         <Route exact path='/search' component={SearchPage} />
       </Switch>
       

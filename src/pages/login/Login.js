@@ -1,10 +1,9 @@
-import Navigation from '../../components/navigation/Navigation'
-
+import LoginForm from '../../components/loginForm/LoginForm'
 
 const Login = () => {
     return(
-        <div>
-            <h1>LOGIN</h1>
+        <div className='columns is-centered'>
+            <LoginForm />
         </div>
     )
 }
