@@ -18,18 +18,22 @@ const Home = ({ setSearchList }) => {
                         <div className="card-header">
                             <p className="card-header-title is-size-4">Search for a book</p>
                         </div>
-
                     </div>
                 </div>
                 <div className="column">
-                    <div className="card">
-                        .card-image
-                        <div className="is-size-3">HELLo</div>
+                    <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
+                        <i className="card-image fas fa-search fa-7x"></i>
+                        <div className="card-header">
+                            <p className="card-header-title is-size-4">Search for a book</p>
+                        </div>
                     </div>
                 </div>
                 <div className="column">
-                    <div className="card">
-                        <div className="is-size-3">HELLo</div>
+                    <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
+                        <i className="card-image fas fa-search fa-7x"></i>
+                        <div className="card-header">
+                            <p className="card-header-title is-size-4">Search for a book</p>
+                        </div>
                     </div>
                 </div>
             </div>
