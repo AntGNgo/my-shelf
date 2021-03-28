@@ -9,7 +9,7 @@ const SearchedBooksList = ({ searchList }) => {
                     <p>{book.volumeInfo.publishedDate.slice(0,4)}</p>
                 </div>
                 <div className='column is-align-self-center'>
-                    <p>{book.volumeInfo.description}</p>
+                    <p>{book.volumeInfo.description ? book.volumeInfo.description : "No description available"}</p>
                 </div>
             </div>
         )

@@ -10,34 +10,37 @@ const Home = ({ setSearchList }) => {
                     <Search setSearchList={setSearchList}/>
                 </div>           
             </div>
-            <div className="container">
-            <div className="columns">
-                <div className="column">
-                    <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
-                        <i className="card-image fas fa-search fa-7x"></i>
-                        <div className="card-header">
-                            <p className="card-header-title is-size-4">Search for a book</p>
+            <div className="section">
+                <div className="container">
+                    <div className="columns">
+                        <div className="column">
+                            <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
+                                <i className="card-image fas fa-search fa-6x"></i>
+                                <div className="card-header">
+                                    <p className="card-header-title has-text-centered is-size-5">Search for a book</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className="column">
-                    <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
-                        <i className="card-image fas fa-search fa-7x"></i>
-                        <div className="card-header">
-                            <p className="card-header-title is-size-4">Search for a book</p>
+                        <div className="column">
+                            <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
+                                <i className="card-image fas fa-plus fa-6x"></i>
+                                <div className="card-header">
+                                    <p className="card-header-title has-text-centered is-size-5">Add it to your reading list</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className="column">
-                    <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
-                        <i className="card-image fas fa-search fa-7x"></i>
-                        <div className="card-header">
-                            <p className="card-header-title is-size-4">Search for a book</p>
+                        <div className="column">
+                            <div className="card is-flex is-flex-direction-column is-align-items-center p-6">
+                                <i className="card-image fas fa-book fa-6x"></i>
+                                <div className="card-header">
+                                    <p className="card-header-title has-text-centered is-size-5">Track your reading journey</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
+            
         </div>
     )
 }
