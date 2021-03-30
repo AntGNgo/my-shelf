@@ -1,5 +1,4 @@
 
-import { Fragment, useState } from 'react'
 import SearchedBooksList from '../../components/searchedBooksList/SearchedBooksList'
 import Search from '../../components/search/Search'
 

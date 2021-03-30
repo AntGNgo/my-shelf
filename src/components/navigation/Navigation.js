@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Search from '../search/Search'
 
 const Navigation = () => {
     return(
@@ -10,9 +9,9 @@ const Navigation = () => {
                 </div>
                 <div className="navbar-menu">
                     <div className="navbar-end">
-                        <Link to='/search'><a className='button is-primary mr-6'>Search</a></Link>
-                        <Link to="/login"><a className='button is-dark ml-6'>Log In</a></Link>
-                        <Link to='/signup'><a className='button is-link ml-2'>Sign Up</a></Link>
+                        <Link to='/search'><p className='button is-primary mr-6'>Search</p></Link>
+                        <Link to="/login"><p className='button is-dark ml-6'>Log In</p></Link>
+                        <Link to='/signup'><p className='button is-link ml-2'>Sign Up</p></Link>
                     </div>                
                 </div>
             </div>

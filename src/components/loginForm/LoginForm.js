@@ -1,6 +1,7 @@
 const LoginForm = () => {
     return(
-        <form className='box p-6'>
+        <div className="columns is-centered">
+            <form className='box p-6'>
             <div className="field">
                 <label className="label">Username</label>
                 <input type="text" className="control"/>
@@ -13,6 +14,8 @@ const LoginForm = () => {
                 <button className="button is-dark">Log In</button>
             </div>
         </form>
+        </div>
+        
     )
 }
 

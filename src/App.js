@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import Navigation from './components/navigation/Navigation'
 import Home from './pages/home/Home'
 import SearchPage from './pages/searchPage/SearchPage'
+import Book from './pages/book/Book'
 import Shelf from './pages/shelf/Shelf'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path='/login' component={Login} />
         <Route exact path='/signup' component={Signup} />
         <Route exact path='/search' component={SearchPage} />
+        <Route exact path='/book/:id' component={Book} />
       </Switch>
       
     </Router>
